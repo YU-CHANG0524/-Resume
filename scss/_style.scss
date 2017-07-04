@@ -2,6 +2,7 @@
 	clear: both;
 }
 .wrap{
+	min-width: 320px;
 	max-width: 1025px;
 	margin: 0 auto ;
 	font-family: 微軟正黑體;
@@ -14,12 +15,20 @@
 	background-size: 100% 100%;
 	background-color: #F9F9F9 ;
 	padding:125px 0 30px 0 ;
-
+	@include mobile680{
+		padding: 50px 0 20px 0;
+		background-image: url(../images/img-headerShape680.png);
+	}
 	.personal-picture{
 		width: 20%;
 		height: auto;
 		float: left;
 		margin: 0 0 0 135px;
+		@include mobile680(){
+			width: 60%;
+			float: none;
+			margin: 0 auto ;
+		}
 		h1,span{
 			text-align: center;
 		}
@@ -47,7 +56,14 @@
 		margin: 0 0 0 80px;
 		float: left;
 		color: #fff;
-
+		@include mobile680(){
+			width: 50%;
+			float: none;
+			margin: 10px auto ;
+		}
+		@include mobile500(){
+			width: 80%;
+		}
 		li{
 			margin: 0 0 20px 0 ;
 		}
@@ -74,6 +90,9 @@
 			margin: 0 auto;
 			@include pad(){
 				width: 60%;
+			}
+			@include mobile500(){
+				width: 80%;
 			}
 		}
 		.skill-3{
@@ -143,16 +162,37 @@
 			height:580px;
 			width: 4px ;
 			background:#D8D8D8;
+			@include mobile680(){
+				left: 15% ;
+			}
+			@include mobile400(){
+				left: 15.7%;
+				}
 		}
 		.time-line{
 			padding: 120px 20% 0 20%;
 			@include desktop-M(){
 				padding: 120px 16% 0 16%;
 			}
+			@include pad(){
+				padding: 120px 10% 0 10% ;
+			}
+			@include mobile680(){
+				padding: 120px 0 0 0 ;
+			}
 			>img{
 				position:absolute;
 				top:85px;
 				left:48.6%;
+				@include pad(){
+					left: 48.1%;
+				}
+				@include mobile680(){
+					left: 12.8%;
+				}
+				@include mobile500(){
+					left: 11.8%;
+					}
 			}
 			.bottom-line{
 				position: absolute;
@@ -160,7 +200,13 @@
 				left: 48%;
 				width: 4.5%;
 				height: 4px;
-				background: #D8D8D8;;
+				background: #D8D8D8;
+				@include mobile680(){
+					left: 13%;
+				}
+				@include mobile400(){
+					width: 6%;
+				}
 			}
 		}
 		.timeline-block{
@@ -173,24 +219,49 @@
 					@include desktop-M(){
 						left: 48.3%;
 					}
+					@include mobile680(){
+					left: 13.5%;
+					}
+					@include mobile500(){
+					left: 12.6%;
+					}
 				}
 			}
 			.timeline-content{
 				width: 40%;
 				border: 1px solid #FB56BF ;
 				border-radius: 10px;
+				@include mobile500(){
+					width: 55%;
+				}
+				@include mobile400(){
+					width: 60%;
+				}
 			}
 			.right-content{
 				padding: 8px 9px 12px 12px;
 				float: right;
+				@include mobile680(){
+					float: none;
+					margin: 0 0 0 25%; 
+				}
 			}
 			.left-content{
 				padding: 8px 12px 12px 11px ;
+				@include mobile680(){
+					margin: 0 0 0 25%;
+				}
 				span{
 					text-align: right;
+					@include mobile680(){
+						text-align: left;
+					}
 				}
 				p{
 					text-align: right;
+					@include mobile680(){
+						text-align: left;
+					}
 				}
 			}
 			span{
@@ -234,6 +305,9 @@
 				float: none;
 				margin: 0 auto;
 			}
+			@include mobile500(){
+				width: 75%;
+			}
 		}
 		
 		.work-3{
@@ -248,7 +322,7 @@
 				width: 32.1111%;	
 			}
 			@include pad(){
-				height: auto;
+				height: 230px;
 				width: 100%;
 				float: none;
 				padding:0 0  10px 0;
@@ -256,7 +330,7 @@
 				.work-img{
 					width: 100%;
 					-webkit-transform: scale(1);
-					// height: 147px;
+					height: 150px;
 				}
 				.pic{
 					overflow: hidden;
@@ -270,10 +344,14 @@
 					display: block;
 					font-size: 14px;
 					margin: 0 0 0 8px;
+					
 				}
 				span:nth-child(2){
 					margin: 9px 0 7px 8px;
 					color: #000;
+					@include pad(){
+						margin: 20px 0 10px 8px ;
+					}
 				}
 				span:nth-child(3){
 					color: #4A4A4A;
@@ -297,6 +375,9 @@
 		@include desktop-M(){
 			padding:0 8% 74px 8% ;
 		}
+		@include mobile680(){
+			padding: 0 0 30px 0 ;
+		}
 		h3{
 			color: #FB56BF;
 		}
@@ -306,17 +387,19 @@
 			height: 380px;
 			float: left;
 			@include pad(){
-				width: 50%;
+				width: 45%;
 				float: none;
 				margin: 0 auto ;
 			}
-			// overflow: hidden;
-			img{
-				height: auto;
-				display: none;
-				position: absolute;
-				box-shadow: 2px 1px 5px gray;
+			@include mobile500(){
+				width: 70%;
 			}
+				img{
+					height: 380px;
+					display: none;
+					position: absolute;
+					box-shadow: 2px 1px 5px gray;
+				}
 		}
 		.about-text{
 			width: 55%;
@@ -325,6 +408,9 @@
 				width: 70%;
 				float: none;
 				margin: 80px auto 0  auto;
+			}
+			@include mobile680(){
+				margin: 0 auto ;
 			}
 			p{
 			display: block;
