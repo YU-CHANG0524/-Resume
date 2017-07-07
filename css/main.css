@@ -151,7 +151,7 @@ img {
   .content .web-skill .skill-3 > li {
     width: 31.1%;
     height: 276px;
-    padding: 25px 0 0 0;
+    padding: 25px 0 10px 0;
     float: left;
     background-color: #fff;
     border-radius: 6px;
@@ -188,6 +188,10 @@ img {
       margin: 0 0 10px 0;
       font-size: 14px;
       list-style: initial; }
+    .content .web-skill .skill-item .description {
+      font-size: 10px;
+      margin: 0 0 10px 0;
+      line-height: 18px; }
   .content .experience {
     margin: 58px 0 0 0;
     padding: 0 0 10px 0;
