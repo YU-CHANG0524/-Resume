@@ -57,6 +57,10 @@
 		margin: 0 0 0 80px;
 		float: left;
 		color: #fff;
+		a{
+			text-decoration: none;
+			color: #fff;
+		}
 		@include mobile680(){
 			width: 50%;
 			float: none;
